@@ -11,7 +11,12 @@ public class Main {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Choose an enemy");
+		System.out.println("Choose an enemy (1/2/3)");
+		
+		if(input.hasNextInt()){
+			int choice = input.nextInt();
+			anEnemy = shipFactory.makeEnemy(choice);
+		}
 		
 		doStuffEnemy(anEnemy);
 	}

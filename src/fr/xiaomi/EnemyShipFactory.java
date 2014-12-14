@@ -2,13 +2,13 @@ package fr.xiaomi;
 
 public class EnemyShipFactory {
 
-	public EnemyShip makeEnemy(String newEnemy){
+	public EnemyShip makeEnemy(int choice){
 		
-		if(newEnemy.equals("1")){
+		if(choice == 1){
 			return new UFOEnemyShip();
-		} else if(newEnemy.equals("2")){
+		} else if(choice == 2 ){
 				return new RocketEnemyShip();
-		} else if(newEnemy.equals("3")){
+		} else if(choice == 3){
 			return new BigUFOEnemyShip();
 		} else {
 			return null;
